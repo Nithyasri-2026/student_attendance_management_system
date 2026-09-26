@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>🎓 Student Attendance System</h1>
+            <p>Manage and monitor student attendance easily</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Mark Attendance -->
+        <section class="card">
+
+            <div class="card-title">
+                <span class="icon">📝</span>
+                <div>
+                    <h2>Mark Attendance</h2>
+                    <p>Record today's student attendance</p>
+                </div>
+            </div>
+
+            <form id="attendanceForm">
+
+                <label for="studentId">Student ID</label>
+
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Example: CS101"
+                    autocomplete="off"
+                    required
+                >
+
+                <label for="subject">Subject</label>
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Example: Java"
+                    autocomplete="off"
+                    required
+                >
+
+                <label for="status">Attendance Status</label>
+
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                </select>
+
+                <button type="submit" id="markButton">
+                    ✅ Mark Attendance
+                </button>
+
+            </form>
+
+            <div id="message" class="message"></div>
+
+        </section>
+
+
+        <!-- Check Attendance -->
+        <section class="card">
+
+            <div class="card-title">
+                <span class="icon">📊</span>
+                <div>
+                    <h2>Check Attendance</h2>
+                    <p>View student's attendance percentage</p>
+                </div>
+            </div>
+
+            <form id="searchForm">
+
+                <label for="searchStudentId">
+                    Student ID
+                </label>
+
+                <input
+                    type="text"
+                    id="searchStudentId"
+                    placeholder="Enter Student ID"
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit">
+                    🔍 Check Attendance
+                </button>
+
+            </form>
+
+            <div id="result"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Attendance System © 2026</p>
+    </footer>
+
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
